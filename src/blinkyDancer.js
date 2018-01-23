@@ -19,6 +19,7 @@ makeBlinkyDancer.prototype.step = function() {
 };
 
 
+
 //OLD CODE:
 
 // var makeBlinkyDancer = function(top, left, timeBetweenSteps) {

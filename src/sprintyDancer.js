@@ -1,8 +1,10 @@
 //FLIPPY
 
 var makeSprintyDancer = function(top, left, timeBetweenSteps) {
-  this.top = Math.random() * 150;
+  this.top = (Math.random() * 150) + 40;
   makeDancer.call(this, this.top, left, timeBetweenSteps);
+  this.beaming = false;
+  this.toggled = true;
   //we want the garbage collector to take this random obj away
   //just creates a lookup
   this.$node.addClass("sprintyDancer");
@@ -14,11 +16,17 @@ makeSprintyDancer.prototype.constructor = makeSprintyDancer;
 
 makeSprintyDancer.prototype.step = function() {
 
-  makeDancer.prototype.step.call(this);
+  
   //this.$node.toggle();
   //toggle some weird css on and off that rotates clockwise 180 degrees? and then
   //does this go backwards? keep adding 180 degrees?
-  this.$node.toggle('flip');
+  if (!this.beaming) {
+    makeDancer.prototype.step.call(this);
+    this.$node.toggle('flip');
+    this.toggled = !this.toggled;
+  } else if (!this.toggled) {
+    this.$node.toggle('flip');
+  }
 };
 
 

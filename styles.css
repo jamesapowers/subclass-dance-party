@@ -22,6 +22,7 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
 .dancer{
   border:20px solid yellow;
   border-radius:1px;
@@ -36,6 +37,8 @@ body, a:link, a:visited, a:active{
 }
 
 .sprintyDancer{
+  width: 155px;
+  height: auto;
   content: url("images/ufo.png");
 }
 
