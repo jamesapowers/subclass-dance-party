@@ -1,21 +1,24 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
+//FLIPPY
+
+var makeSprintyDancer = function(top, left, timeBetweenSteps) {
+  this.top = Math.random() * 150;
+  makeDancer.call(this, this.top, left, timeBetweenSteps);
   //we want the garbage collector to take this random obj away
   //just creates a lookup
-  // var someCSS = {
-  //   content: url("https://comps.canstockphoto.com/closeup-image-of-small-dog-yorkshire-stock-photograph_csp2414009.jpg")
-  // };
-  // this.$node.css(someCSS);
-  this.$node.addClass("blinkyDancer");
+  this.$node.addClass("sprintyDancer");
 };
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
+makeSprintyDancer.prototype = Object.create(makeDancer.prototype);
 
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+makeSprintyDancer.prototype.constructor = makeSprintyDancer;
 
-makeBlinkyDancer.prototype.step = function() {
+makeSprintyDancer.prototype.step = function() {
+
   makeDancer.prototype.step.call(this);
-  this.$node.fadeToggle();
+  //this.$node.toggle();
+  //toggle some weird css on and off that rotates clockwise 180 degrees? and then
+  //does this go backwards? keep adding 180 degrees?
+  this.$node.toggle('flip');
 };
 
 
