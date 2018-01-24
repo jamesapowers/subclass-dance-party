@@ -7,6 +7,10 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // };
   // this.$node.css(someCSS);
   this.$node.addClass("blinkyDancer");
+  this.wills = ['willAction', 'willBlazer', 'willRotatePointing',
+    'willPointing', 'willAgent'
+  ];
+  this.willSelector();
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
@@ -16,6 +20,11 @@ makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 makeBlinkyDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
   this.$node.fadeToggle();
+};
+
+makeBlinkyDancer.prototype.willSelector = function() {
+  let changeWills = this.wills[Math.floor(Math.random() * (this.wills.length - 1))];
+  this.$node.addClass(changeWills);
 };
 
 

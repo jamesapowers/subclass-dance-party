@@ -24,29 +24,52 @@ body, a:link, a:visited, a:active{
 }
 
 .dancer{
-  border:20px solid yellow;
-  border-radius:1px;
+/*border:20px solid yellow;
+  border-radius:1px;*/
   position:absolute;
-  content: url("https://cdn.xl.thumbs.canstockphoto.com/small-pumpkin-picture_csp24510515.jpg");
 }
 
 .blinkyDancer{
-  width: 120px;
-  height:120px;
-  content: url("https://comps.canstockphoto.com/closeup-image-of-small-dog-yorkshire-stock-photograph_csp2414009.jpg");
+  width: auto;
+  height: 200px;
+  content: url("images/carlton.gif");
+}
+.blinkyDancer:hover{
+  content: url("images/carlton.gif");
 }
 
+.willAction{
+  content: url("images/WillAction.png");
+}
+.willBlazer{ 
+  content: url("images/WillBlazer.png");
+}
+.willPointing{
+  content: url("images/WillPointing.png");
+}
+.willRotatePointing{
+  content: url("images/WillRotatePointing.png");
+}
+.willAgent{
+  content: url("images/MIB.gif");
+}
 .sprintyDancer{
   width: 155px;
   height: auto;
   content: url("images/ufo.png");
 }
 
+.beamDancer{
+  width: 200px;
+  height: auto;
+  content: url("images/beamDancer.png");
+}
+
 .flippyDancer {
 
-  content: url("https://cdn.xl.thumbs.canstockphoto.com/small-pumpkin-picture_csp24510515.jpg");
-/*  width: 120px;
-  height: 120px;*/
+  content: url("images/tacoMonster.webp");
+  width: 200px;
+  height: auto;
 
   -webkit-animation:spin 0.5s linear 1;
   -moz-animation:spin 0.5s linear 1;
